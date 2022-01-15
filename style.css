@@ -313,6 +313,7 @@ body {
 .nav-toggler {
     display: none;
     font-size: 25px;
+    cursor: pointer;
 }
 
 
