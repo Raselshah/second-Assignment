@@ -3,6 +3,9 @@
 /*-------------------
      common style
 -------------------- */
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
@@ -13,7 +16,7 @@ body{
 }
 .container{
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
 }
 .highlight{
     color: rgba(54, 247, 247, 0.801);
@@ -101,7 +104,9 @@ body{
 .photo img{
     width: 100%;
 }
-
+/*------------------------
+     company logo style 
+---------------------------*/
 .size{
     width: 80%;
     margin: auto;
@@ -145,11 +150,14 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    justify-content: center;
     justify-items: center;
 }
 .card{
     border-radius: 5px;
     box-shadow: 5px 8px 8px 10px lightgray;
+    justify-items: center;
+    justify-items: center;
 }
 .card-padding{
     padding: 15px 15px;
@@ -195,32 +203,6 @@ body{
     cursor: pointer;
 }
 
-/* -----------------------
-    footer style
--------------------------- */
-
-.footer-bg{
-    background-color: #0A0826;
-    margin-top: 101px;
-    color: #fff;
-    padding: 40px 0;
-    line-height: 2em;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-.footer-bg p{
-    color: #D9DBE1;
-}
-.footer-highlight{
-    color: lightsalmon;
-}
-.social-icon .fab{
-    font-size: 20px;
-    padding: 3px 7px;
-    cursor: pointer;
-}
 /* ------------------------
     company-section style
 ---------------------------- */
@@ -275,3 +257,168 @@ body{
 .people-info h4{
     color:#3A3A3A;
 }
+
+#navbar-toggle{
+    display: none;
+}
+.nav-toggler{
+    display: none;
+    font-size: 25px;
+}
+
+
+/* -----------------------
+    footer style
+-------------------------- */
+
+.footer-bg{
+    background-color: #0A0826;
+    margin-top: 101px;
+    color: #fff;
+    padding: 40px 0;
+    line-height: 2em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-bg p{
+    color: #D9DBE1;
+}
+.footer-highlight{
+    color: lightsalmon;
+}
+.social-icon .fab{
+    font-size: 20px;
+    padding: 3px 7px;
+    cursor: pointer;
+}
+
+
+/*--------------------------
+     Responsive style
+---------------------------- */
+@media (max-width:1200px) {
+    .container{
+        max-width: 90%;
+        margin: auto;
+    }
+    .cards{
+        gap:15px;
+    }
+    .influencer-content:hover.influencer-left{
+        transform: translateX(0px);
+        transition: 0.5s ease-in-out;
+    }
+}
+@media (max-width:1090px){
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .member-comment{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .influencer-left h2 {
+        font-size: 2.5em;
+    }
+    .company-logo{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+@media (max-width:900px){
+    .header-logo h2{
+        font-size: 18px;
+    }
+}
+@media (max-width:880px){
+    .influencer-left h2 {
+        font-size: 2em;
+    }
+    .header-logo h2{
+        font-size: 20px;
+    }
+}
+@media (max-width:820px){
+    .nav-toggler{
+        display: block;
+    }
+    .navbar ul li{
+        padding: 10px;
+    }
+    .navbar ul li a{
+        color: #fff;
+    }
+    .navigation li a:focus{
+        background-color: rgba(152, 255, 104, 0.699);
+    }
+    .navigation{
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(119, 255, 255, 0.521);
+        transform: translateY(-350px);
+        transition: 1s ease-in-out;
+        flex-direction: column;
+    }
+    #navbar-toggle:checked ~ .navigation{
+        transform: translateY(0px);
+    }
+}
+@media (max-width:800px){
+    .cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .member-comment{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .influencer-left h2 {
+        font-size: 2.5em;
+    }
+    .influencer-content{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width:440px){
+    
+    .navigation{
+        background-color: rgba(119, 255, 255, 0.821);
+    }
+    .influencer-content{   
+        justify-content: center;
+        align-items: center;
+    }
+    .influencer-left{
+        width: 90%;
+        margin: auto;
+    }
+    .influencer-left h2{
+        font-size: 2em;
+    }
+    .cards{
+        justify-content: center;
+        align-items: center;
+
+    }
+    .member-comment{
+        justify-content: center;
+        align-items: center;
+    }
+    .influencer-left p{
+        margin: 20px 0;
+        line-height: 1.5em;
+        text-align: justify;
+        width:80%;
+    }
+    .company-logo{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}   
