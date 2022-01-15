@@ -5,6 +5,7 @@
 -------------------- */
 body{
     font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
 }
 *{
     margin: 0;
@@ -15,40 +16,43 @@ body{
     margin: 0 auto;
 }
 .highlight{
-    color: aqua;
+    color: rgba(54, 247, 247, 0.801);
 }
 .heading{
-    color: aqua;
+    color: #3A3A3A;
     font-size: 2rem;
 }
 .pragraph{
-    color: rgba(125, 255, 212, 0.897);
+    color: #6C6C6C;
 }
 .primary-button{
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
     border: 0;
-    background-image: linear-gradient(aqua,rgba(125, 255, 212, 0.897));
+    background-image: linear-gradient(rgba(47, 214, 214, 0.856),rgba(125, 255, 212, 0.897));
     cursor: pointer;
     font-size: 18px;
+    align-items: center;
 }
 .primary-button:hover{
     background-image: linear-gradient(rgba(125, 255, 212, 0.897),aqua);
 }
-/* -----------------
+/* --------------------
       header style
-------------------- */
+----------------------- */
 
 .header{
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    margin: 50px 0 100px 0;
     align-items: center;
 }
 .header-logo h2{
     font-size: 25px;
     text-transform: uppercase;
+    color: #3A3A3A;
+    cursor: pointer;
 }
 .navbar ul{
     display: flex;
@@ -58,20 +62,27 @@ body{
 }
 .navbar ul li a{
     text-decoration: none;
-    margin-left: 20px;
-    color: aqua;
+    color: #3A3A3A;
+    padding: 10px 20px;
+}
+.navbar ul li a:hover{
+    background-color: aquamarine;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
 }
 
-/* -------------------
-    section style
----------------------- */
-
+/* -----------------------------
+    influencer section style
+--------------------------------- */
 .influencer-content{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+}
+.influencer-left h2{
+    font-size: 3.5em;
 }
 .influencer-left p{
     margin: 20px 0;
@@ -98,18 +109,29 @@ body{
 .company-logo{
     display: flex;
     justify-content: space-between;
-    border-top: 2px solid aquamarine;
-    border-bottom: 2px solid aquamarine;
+    border-top: 2px solid #a6bdda1a;
+    border-bottom: 2px solid  #a6bdda1a;
     align-items: center;
     margin-top: 100px;
 }
 .logo{
     padding: 20px 0;
 }
+.company-logo img{
+    cursor: pointer;
+}
+.influencer-left{
+    transform: translateX(-800px);
+}
+.influencer-content:hover .influencer-left{
+    transform: translateX(0px);
+    transition: 0.5s ease-in-out;
+}
 
-/* -----------------------------
-    popular collection style
-------------------------------- */
+
+/* --------------------------------------
+    popular collection section style
+----------------------------------------- */
 
 .collection{
     margin-top: 100px;
@@ -146,6 +168,7 @@ body{
 .card-info h3{
     margin: 5px 0;
     font-size: 1.5em;
+    color: #3A3A3A;
 }
 .card-info p{
     margin: 5px 0;
@@ -159,7 +182,18 @@ body{
     color: lightgray;
     font-size: 16px;
 }
-
+.collection button{
+    color:  crimson;
+    border:0;
+    padding: 10px 15px;
+    background-color: #fff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    float: right;
+    margin: 30px;
+    cursor: pointer;
+}
 
 /* -----------------------
     footer style
@@ -167,7 +201,7 @@ body{
 
 .footer-bg{
     background-color: #0A0826;
-    margin-top: 100px;
+    margin-top: 101px;
     color: #fff;
     padding: 40px 0;
     line-height: 2em;
