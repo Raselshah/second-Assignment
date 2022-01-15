@@ -418,7 +418,6 @@ body {
     }
 
     .navigation {
-        position: absolute;
         top: 90px;
         left: 0;
         width: 100%;
@@ -427,7 +426,8 @@ body {
         background-color: rgba(119, 255, 255, 0.521);
         transform: translateY(-350px);
         transition: 1s ease-in-out;
-        flex-direction: column;
+        flex-direction: column;  
+        position: absolute;
     }
 
     #navbar-toggle:checked~.navigation {
